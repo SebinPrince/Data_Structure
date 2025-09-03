@@ -49,7 +49,6 @@ int addPoly(Term poly1[], int n1, Term poly2[], int n2, Term result[]) {
         k++;
     }
 
-    // Copy remaining terms
     while (i < n1) {
         result[k++] = poly1[i++];
     }
