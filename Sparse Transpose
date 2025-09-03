@@ -12,13 +12,11 @@ printf("Enter elements of Matrix 1:\n");
     for(i = 0; i < r; i++)
         for(j = 0; j < c; j++)
             scanf("%d", &mat1[i][j]);
-
     
 printf("Enter elements of Matrix 2:\n");
     for(i = 0; i < r; i++)
         for(j = 0; j < c; j++)
             scanf("%d", &mat2[i][j]);
-
     
 int sparse1[3][100], n1 = 0;
     for(i = 0; i < r; i++)
@@ -29,7 +27,6 @@ int sparse1[3][100], n1 = 0;
                 sparse1[2][n1] = mat1[i][j];
                 n1++;
             }
-
    
  int sparse2[3][100], n2 = 0;
     for(i = 0; i < r; i++)
@@ -41,7 +38,6 @@ int sparse1[3][100], n1 = 0;
                 n2++;
             }
 
-   
 printf("\nSparse Matrix 1 (row column value):\n");
     for(i = 0; i < n1; i++)
         printf("%d %d %d\n", sparse1[0][i], sparse1[1][i], sparse1[2][i]);
@@ -105,9 +101,6 @@ printf("\nSparse Matrix 1 (row column value):\n");
         trans[1][i] = res[0][i]; 
         trans[2][i] = res[2][i]; 
     }
-
-    
-    
 
     printf("\nTranspose of Sum :\n");
     for(i = 0; i < k; i++)
