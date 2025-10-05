@@ -9,7 +9,7 @@ struct Node {
     struct Node* next;
 };
 
-struct Node* current = NULL;  // Current page
+struct Node* current = NULL; 
 
 void visitNewPage(char url[]) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -69,7 +69,7 @@ int main() {
         switch(choice) {
             case 1:
                 printf("Enter URL to visit: ");
-                fgets(url,100,stdin);  // gets() is simple but unsafe; better use fgets() in practice
+                fgets(url,100,stdin);  
                 visitNewPage(url);
                 break;
             case 2:
@@ -88,6 +88,5 @@ int main() {
                 printf("Invalid choice.\n");
         }
     } while(choice != 5);
-
     return 0;
 }
