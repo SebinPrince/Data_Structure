@@ -4,7 +4,6 @@
 int queue[100], front = -1, rear = -1;
 int visited[100];
 
-
 void enqueue(int value) {
     if (rear == 99)
         printf("Queue Overflow\n");
@@ -15,13 +14,11 @@ void enqueue(int value) {
     }
 }
 
-
 int dequeue() {
     if (front == -1 || front > rear)
         return -1;
     return queue[front++];
 }
-
 
 void bfs(int adj[10][10], int start, int n) {
     int i;
