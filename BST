@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct Node {
     int data;
     struct Node* left;
     struct Node* right;
 };
-
 
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -15,7 +13,6 @@ struct Node* createNode(int data) {
     newNode->left = newNode->right = NULL;
     return newNode;
 }
-
 
 struct Node* insert(struct Node* root, int data) {
     if (root == NULL) {
@@ -28,7 +25,6 @@ struct Node* insert(struct Node* root, int data) {
     }
     return root;
 }
-
 
 int search(struct Node* root, int data) {
     if (root == NULL) {
@@ -43,14 +39,12 @@ int search(struct Node* root, int data) {
     return search(root->right, data);
 }
 
-
 struct Node* findMin(struct Node* root) {
     while (root->left != NULL) {
         root = root->left;
     }
     return root;
 }
-
 
 struct Node* delete(struct Node* root, int data) {
     if (root == NULL) {
