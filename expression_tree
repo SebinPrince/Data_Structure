@@ -5,23 +5,18 @@
 
 #define MAX 100
 
-
 struct Node {
     char data;
     struct Node *left, *right;
 };
-
-
 struct StackNode {
     struct Node* data;
     struct StackNode* next;
 };
 struct StackNode* topNode = NULL;
 
-
 char opStack[MAX];
 int topOp = -1;
-
 
 void pushNode(struct Node* treeNode) {
     struct StackNode* temp = (struct StackNode*)malloc(sizeof(struct StackNode));
@@ -37,7 +32,6 @@ struct Node* popNode() {
     free(temp);
     return res;
 }
-
 
 struct Node* createNode(char value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -67,7 +61,6 @@ char peekOp() {
     return opStack[topOp];
 }
 
-
 void infixToPostfix(char infix[], char postfix[]) {
     int i = 0, j = 0;
     char symbol;
@@ -93,7 +86,6 @@ void infixToPostfix(char infix[], char postfix[]) {
     postfix[j] = '\0';
 }
 
-
 struct Node* createExpressionTree(char postfix[]) {
     int i = 0;
     char symbol;
@@ -110,7 +102,6 @@ struct Node* createExpressionTree(char postfix[]) {
     }
     return popNode();
 }
-
 
 void inorder(struct Node* root) {
     if (root != NULL) {
